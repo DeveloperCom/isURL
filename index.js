@@ -19,7 +19,8 @@ import { test } from './test.js';
 let conn = await mongoose.connect(`mongodb+srv://${process.env.ADMIN}:${process.env.PASSWORD}@url.gtqld5r.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`)
 
 app.get('/', (req, res) => {
-  res.sendFile("./templete/index.html", { root: __dirname })
+   res.json({status:"ok"});
+  //res.sendFile("./templete/index.html", { root: __dirname })
 })
 
 
